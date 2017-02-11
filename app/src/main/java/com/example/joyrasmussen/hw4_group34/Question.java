@@ -11,6 +11,26 @@ public class Question implements Serializable{
     String imageURL;
     ArrayList<String> choices;
 
+    public int getID() {
+        return ID;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getAnswer() {
+        return answer;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public ArrayList<String> getChoices() {
+        return choices;
+    }
+
     public Question(int ID, String text, int answer, String imageURL, ArrayList<String> choices) {
         this.ID = ID;
         this.text = text;

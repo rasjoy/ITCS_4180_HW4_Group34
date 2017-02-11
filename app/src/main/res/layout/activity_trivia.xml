@@ -23,13 +23,10 @@
             android:text="@string/startTimer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/relativeLayout"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="16dp"
-            android:layout_marginEnd="16dp"
             android:id="@+id/timerText"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textColor="@android:color/black" />
 
         <TextView
@@ -37,7 +34,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/qNumText"
             android:text="q?"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textColor="@android:color/black"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"

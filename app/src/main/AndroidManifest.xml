@@ -17,7 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Trivia" android:label="@string/trivia_intent"></activity>
+        <activity android:name=".Trivia" android:label="@string/trivia_intent">
+            <intent-filter>
+                <action android:name="com.exampe.joy.hw4_group34.intent.action.View"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

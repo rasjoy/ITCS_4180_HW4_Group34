@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -12,9 +13,12 @@ public class Trivia extends AppCompatActivity {
     Button prevButton;
     Button nextButton;
     TextView questionNum;
+    TextView questionText;
+    TextView countDown;
     int index;
     int arraySize; //creating this since array.size is called so many times.
     ArrayList<Question> questionArray;
+    RadioGroup radioGroup;
 
 
     @Override
@@ -31,7 +35,9 @@ public class Trivia extends AppCompatActivity {
 
         nextButton = (Button) findViewById(R.id.nextButton);
         questionNum = (TextView) findViewById(R.id.qNumText);
-
+        questionText = (TextView) findViewById(R.id.questionText);
+        countDown = (TextView) findViewById(R.id.timerText);
+        radioGroup = (RadioGroup) findViewById(R.id.questionChoice);
 
 
 
