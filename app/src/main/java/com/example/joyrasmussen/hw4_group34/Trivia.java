@@ -1,6 +1,7 @@
 package com.example.joyrasmussen.hw4_group34;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.os.CountDownTimer;
@@ -73,7 +74,9 @@ public class Trivia extends AppCompatActivity {
             @Override
             public void onFinish() {
                 //also start Stats class here
-
+                Intent intent = new Intent(Trivia.this, StatsActivity.class);
+                intent.putExtra("QUESTIONS", questionArray);
+                startActivity(intent);
 
 
             }
@@ -102,25 +105,29 @@ public class Trivia extends AppCompatActivity {
 
     public void onNextListener(View v){
         setUserAnswer();
-        if(index == arraySize){
-            //finish the app hear
+        if(index == arraySize - 1){
 
+            //start stats
+            Intent intent = new Intent(Trivia.this, StatsActivity.class);
+            intent.putExtra("QUESTIONS", questionArray);
+            startActivity(intent);
+            finish();
             return;
-        }
-        image.setVisibility(View.INVISIBLE);
-        loadImage.setVisibility(View.VISIBLE);
-        progressBar.setVisibility(View.VISIBLE);
-        index++;
-        displayQuestion();
-        if(index == 1){
-            prevButton.setEnabled(true);
-        }
-        if(index == arraySize){
-            //finish the app hear
-            nextButton.setText("Finish");
+        }else {
+            image.setVisibility(View.INVISIBLE);
+            loadImage.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.VISIBLE);
+            index++;
+            displayQuestion();
+            if (index == 1) {
+                prevButton.setEnabled(true);
+            }
+            if (index == arraySize - 1) {
+                //finish the app hear
+                nextButton.setText("Finish");
 
+            }
         }
-
 
     }
     public void displayQuestion(){
@@ -128,6 +135,7 @@ public class Trivia extends AppCompatActivity {
         Question question = questionArray.get(index);
         //loading picture
         //Log.d("Image:", image.getMaxHeight() + " " + image.getMaxWidth() );
+
         if( question.getImageURL() != null){
             Picasso.with(Trivia.this).load(question.getImageURL()).fit().centerInside().into(image, new Callback() {
                 @Override
