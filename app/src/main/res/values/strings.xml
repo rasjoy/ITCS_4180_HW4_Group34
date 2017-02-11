@@ -12,5 +12,6 @@
     <string name="finishButton">Finish</string>
     <string name="performanceTextView">Your performance: </string>
     <string name="percentageTextView">0%</string>
+    <string name="loadingImage">Loading Image</string>
 
 </resources>
