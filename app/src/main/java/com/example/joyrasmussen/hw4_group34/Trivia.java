@@ -137,7 +137,7 @@ public class Trivia extends AppCompatActivity {
         //Log.d("Image:", image.getMaxHeight() + " " + image.getMaxWidth() );
 
         if( question.getImageURL() != null){
-            Picasso.with(Trivia.this).load(question.getImageURL()).fit().centerInside().into(image, new Callback() {
+            Picasso.with(Trivia.this).load(question.getImageURL()).into(image, new Callback() {
                 @Override
                 public void onSuccess() {
                     image.setVisibility(View.VISIBLE);

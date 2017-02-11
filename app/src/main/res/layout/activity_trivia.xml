@@ -50,8 +50,8 @@
         android:id="@+id/imageView"
         android:layout_below="@+id/top_layout"
         android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true"/>
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true" />
 
     <TextView
         android:text="TextView"
