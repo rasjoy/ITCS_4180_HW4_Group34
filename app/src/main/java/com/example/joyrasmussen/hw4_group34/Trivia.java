@@ -13,6 +13,7 @@ public class Trivia extends AppCompatActivity {
     Button nextButton;
     TextView questionNum;
     int index;
+    int arraySize; //creating this since array.size is called so many times.
     ArrayList<Question> questionArray;
 
 
@@ -22,6 +23,7 @@ public class Trivia extends AppCompatActivity {
         setContentView(R.layout.activity_trivia);
 
         questionArray = new ArrayList<Question>();
+        arraySize = questionArray.size();
         //initialize the app
         prevButton = (Button) findViewById(R.id.previousButton);
         prevButton.setEnabled(false);
@@ -43,7 +45,7 @@ public class Trivia extends AppCompatActivity {
         if(index == 0){
             prevButton.setEnabled(false);
         }
-        if(index == questionArray.size() -1 ){
+        else if(nextButton.getText().toString().equals("Finish")){
             nextButton.setText("Next");
 
         }
@@ -53,14 +55,14 @@ public class Trivia extends AppCompatActivity {
     }
 
     public void onNextListener(View v){
-        if(index == questionArray.size()){
+        if(index == arraySize){
             //finish the app hear
 
 
         }
         index--;
 
-        if(index == questionArray.size()){
+        if(index == arraySize){
             //finish the app hear
             nextButton.setText("Finish");
 
