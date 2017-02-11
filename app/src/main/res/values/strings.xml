@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Trivia App</string>
     <string name="trivia_intent">Trivia</string>
+    <string name="startTimer">Time Left: 120 seconds</string>
+    <string name="previousButton">Previous</string>
+    <string name="nextButton">Next</string>
 </resources>
