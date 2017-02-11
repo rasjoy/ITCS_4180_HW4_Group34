@@ -8,5 +8,9 @@
     <string name="startTimer">Time Left: 120 seconds</string>
     <string name="previousButton">Previous</string>
     <string name="nextButton">Next</string>
-    <string name="loadingImage">Loading Image</string>
+    <string name="correctAnswersTextView">Correct answers</string>
+    <string name="finishButton">Finish</string>
+    <string name="performanceTextView">Your performance: </string>
+    <string name="percentageTextView">0%</string>
+
 </resources>
