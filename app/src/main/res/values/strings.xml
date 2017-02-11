@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Trivia App</string>
     <string name="trivia_intent">Trivia</string>
+    <string name="welcomeTextView">Welcome to Trivia App</string>
+    <string name="startButton">Start Trivia</string>
+    <string name="exitButton">Exit</string>
+    <string name="loadingTextView">Loading Trivia</string>
 </resources>

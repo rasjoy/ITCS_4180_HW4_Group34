@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,8 +11,75 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.joyrasmussen.hw4_group34.MainActivity">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/welcomeTextView"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            android:text="@string/welcomeTextView" />
+
+        <TextView
+            android:text="@string/loadingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loadingTextView"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:layout_below="@+id/welcomeTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="143dp" />
+
+        <Button
+            android:text="@string/startButton"
+            android:layout_height="wrap_content"
+            android:id="@+id/startButton"
+            android:layout_width="120dp"
+            android:textColor="@android:color/background_light"
+            android:background="@android:color/darker_gray"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/loadingTextView"
+            android:layout_toEndOf="@+id/loadingTextView"
+            android:onClick="start"
+            android:clickable="false" />
+
+        <Button
+            android:text="@string/exitButton"
+            android:layout_height="wrap_content"
+            android:id="@+id/exitButton"
+            android:layout_width="120dp"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="@android:color/background_light"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/loadingTextView"
+            android:layout_toStartOf="@+id/loadingTextView"
+            android:onClick="finish (MainActivity)" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar2"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/loadingTextView"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/trivia"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
 </RelativeLayout>
