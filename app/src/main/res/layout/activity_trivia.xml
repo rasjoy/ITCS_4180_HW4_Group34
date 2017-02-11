@@ -49,7 +49,9 @@
         android:layout_alignParentStart="true"
         android:id="@+id/imageView"
         android:layout_below="@+id/top_layout"
-        android:layout_height="150dp" />
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
 
     <TextView
         android:text="TextView"
@@ -58,7 +60,7 @@
         android:layout_below="@+id/imageView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/questionText"
         android:textSize="18sp"
         android:textColor="@android:color/black" />
@@ -98,5 +100,23 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:onClick="onNextListener"/>
+
+    <TextView
+        android:text="@string/loadingImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/loadingImageText"
+        android:layout_below="@+id/top_layout"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/loadingProgress"
+        android:layout_below="@+id/loadingImageText"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

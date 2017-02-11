@@ -20,8 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void start(View view){
-
-
+        Intent intent = new Intent("com.exampe.joy.hw4_group34.intent.action.View");
+        intent.addCategory(Intent.CATEGORY_DEFAULT);
+        intent.putExtra("QUESTIONS", questions);
+         startActivity(intent);
     }
 
     @Override
@@ -56,5 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void finish(View view){
         finish();
+        System.exit(0);
     }
 }
