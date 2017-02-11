@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">HW4_Group34</string>
+    <string name="app_name">Trivia App</string>
+    <string name="trivia_intent">Trivia</string>
 </resources>
