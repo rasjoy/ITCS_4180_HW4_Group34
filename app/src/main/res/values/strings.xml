@@ -5,4 +5,7 @@
     <string name="startButton">Start Trivia</string>
     <string name="exitButton">Exit</string>
     <string name="loadingTextView">Loading Trivia</string>
+    <string name="startTimer">Time Left: 120 seconds</string>
+    <string name="previousButton">Previous</string>
+    <string name="nextButton">Next</string>
 </resources>
