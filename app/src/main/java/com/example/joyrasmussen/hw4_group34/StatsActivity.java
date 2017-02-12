@@ -91,7 +91,7 @@ public class StatsActivity extends AppCompatActivity {
 
     }
 
-    public void finish(View view){
+    public void finishStats(View view){
         finish();
     }
 }

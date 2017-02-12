@@ -34,7 +34,7 @@
             android:id="@+id/button"
             android:background="@android:color/holo_blue_light"
             android:textColor="@android:color/background_light"
-            android:onClick="finish" />
+            android:onClick="finishStats" />
 
         <ScrollView
             android:layout_width="match_parent"
