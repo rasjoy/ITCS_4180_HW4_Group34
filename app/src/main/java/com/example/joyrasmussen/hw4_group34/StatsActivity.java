@@ -32,11 +32,13 @@ public class StatsActivity extends AppCompatActivity {
 
             String text = q.getText();
             ArrayList<String> choices = q.choices;
-
-            String userAnswer = choices.get(q.getUserGuess());
-
-            if (userAnswer == null) {
+            String userAnswer;
+            if(q.getUserGuess() == 0){
                 userAnswer = "";
+            }
+             else{
+             userAnswer = choices.get(q.getUserGuess() -1 );
+
             }
             String actualAnswer = choices.get(q.getAnswer() - 1);
 

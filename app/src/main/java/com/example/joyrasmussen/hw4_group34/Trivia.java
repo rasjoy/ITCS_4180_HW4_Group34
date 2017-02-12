@@ -43,7 +43,7 @@ public class Trivia extends AppCompatActivity {
         setContentView(R.layout.activity_trivia);
 
         questionArray = (ArrayList<Question>) getIntent().getSerializableExtra("QUESTIONS");
-        Log.d("Array", questionArray.size()+"");
+       // Log.d("Array", questionArray.size()+"");
         arraySize = questionArray.size();
         //initialize the app
         prevButton = (Button) findViewById(R.id.previousButton);
@@ -166,7 +166,7 @@ public class Trivia extends AppCompatActivity {
         radioGroup.clearCheck();
         radioGroup.removeAllViews();
         ArrayList<String> choices = question.getChoices();
-        Log.d("Choices", choices.size() + "");
+        //Log.d("Choices", choices.size() + "");
         for(int i = 0; i < choices.size(); i ++){
             RadioButton radioButton = new RadioButton(this);
             radioButton.setText(choices.get(i));
@@ -179,8 +179,9 @@ public class Trivia extends AppCompatActivity {
 
     }
     public void setUserAnswer(){
+        Log.d("User's Choice", radioGroup.getCheckedRadioButtonId() + "");
         questionArray.get(index).setUserGuess(radioGroup.getCheckedRadioButtonId()+ 1);
-        Log.d("User:", questionArray.get(index).getUserGuess() + "");
+
     }
 
 }
