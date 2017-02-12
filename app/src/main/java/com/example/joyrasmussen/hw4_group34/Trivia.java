@@ -30,6 +30,7 @@ public class Trivia extends AppCompatActivity {
     TextView loadImage;
     ImageView image;
     ProgressBar progressBar;
+    CountDownTimer countDownTimer;
     int index;
     int arraySize; //creating this since array.size is called so many times.
     ArrayList<Question> questionArray;
@@ -65,7 +66,7 @@ public class Trivia extends AppCompatActivity {
 
             }
         });
-        new CountDownTimer(120000, 1000) {
+        countDownTimer =  new CountDownTimer(120000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 countDown.setText("Time Left: " + millisUntilFinished /1000 + " seconds");
@@ -106,7 +107,7 @@ public class Trivia extends AppCompatActivity {
     public void onNextListener(View v){
         setUserAnswer();
         if(index == arraySize - 1){
-
+            countDownTimer.cancel();
             //start stats
             Intent intent = new Intent(Trivia.this, StatsActivity.class);
             intent.putExtra("QUESTIONS", questionArray);
@@ -160,6 +161,7 @@ public class Trivia extends AppCompatActivity {
         radioGroup.clearCheck();
         radioGroup.removeAllViews();
         ArrayList<String> choices = question.getChoices();
+        Log.d("Choices", choices.size() + "");
         for(int i = 0; i < choices.size(); i ++){
             RadioButton radioButton = new RadioButton(this);
             radioButton.setText(choices.get(i));
