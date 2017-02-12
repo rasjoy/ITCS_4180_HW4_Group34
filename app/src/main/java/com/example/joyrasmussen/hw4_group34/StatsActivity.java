@@ -67,7 +67,7 @@ public class StatsActivity extends AppCompatActivity {
         TextView choiceTextView = new TextView(this);
         choiceTextView.setText("Your guess: " + userAnswer);
         if (!correct) {
-            choiceTextView.setTextColor(Color.RED);
+            choiceTextView.setBackgroundColor(Color.RED);
         }
         linearLayout.addView(choiceTextView);
 
