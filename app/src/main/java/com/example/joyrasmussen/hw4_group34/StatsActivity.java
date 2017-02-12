@@ -33,7 +33,7 @@ public class StatsActivity extends AppCompatActivity {
             String text = q.getText();
             ArrayList<String> choices = q.choices;
             String userAnswer;
-            if(q.getUserGuess() == 0){
+            if(q.getUserGuess() <= 0){
                 userAnswer = "";
             }
              else{
