@@ -61,7 +61,7 @@
             android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@+id/loadingTextView"
             android:layout_toStartOf="@+id/loadingTextView"
-            android:onClick="finish (MainActivity)" />
+            android:onClick="finish (MainActivity" />
 
         <ProgressBar
             style="?android:attr/progressBarStyle"

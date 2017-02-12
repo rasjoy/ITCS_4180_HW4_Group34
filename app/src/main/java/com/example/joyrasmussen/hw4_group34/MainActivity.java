@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void finish(View view){
-        finish();
-        System.exit(0);
+       finish();
     }
 }

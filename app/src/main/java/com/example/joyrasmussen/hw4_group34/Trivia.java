@@ -107,6 +107,10 @@ public class Trivia extends AppCompatActivity {
     public void onNextListener(View v){
         setUserAnswer();
         if(index == arraySize - 1){
+            /*
+            * The countdown timer needs to be canceled despite the activity being cancelled.
+            * I noticed during testing that a second StatsActivity will be started despite the Trivia one being paused.
+            */
             countDownTimer.cancel();
             //start stats
             Intent intent = new Intent(Trivia.this, StatsActivity.class);
