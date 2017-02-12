@@ -33,7 +33,8 @@
             android:layout_centerHorizontal="true"
             android:id="@+id/button"
             android:background="@android:color/holo_blue_light"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:onClick="finish" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -70,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView2"
             android:layout_marginTop="18dp"
-            android:id="@+id/progressBar6"
+            android:id="@+id/progressBar"
             android:layout_width="300dp" />
 
         <TextView
@@ -79,7 +80,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/percentageTextView"
             android:textSize="18sp"
-            android:layout_alignBottom="@+id/progressBar6"
+            android:layout_above="@+id/progressBar"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 

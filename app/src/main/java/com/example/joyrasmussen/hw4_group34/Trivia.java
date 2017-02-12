@@ -78,6 +78,7 @@ public class Trivia extends AppCompatActivity {
                 Intent intent = new Intent(Trivia.this, StatsActivity.class);
                 intent.putExtra("QUESTIONS", questionArray);
                 startActivity(intent);
+                finish();
 
 
             }
