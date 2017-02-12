@@ -48,8 +48,7 @@
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@+id/loadingTextView"
             android:layout_toEndOf="@+id/loadingTextView"
-            android:onClick="start"
-            android:clickable="false" />
+            android:onClick="start" />
 
         <Button
             android:text="@string/exitButton"
